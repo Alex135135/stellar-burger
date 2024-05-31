@@ -19,6 +19,7 @@ import { useDispatch } from '@store';
 import { getIngredients } from '@slices/ingredientSlice';
 import { useEffect } from 'react';
 import { getUser } from '@slices/userSlice';
+import { CenteringComponent } from '../centering-component';
 
 const App = () => {
   const location = useLocation();
@@ -36,6 +37,25 @@ const App = () => {
 
       <Routes location={background || location}>
         <Route path='/' element={<ConstructorPage />} />
+
+        <Route
+          path='/ingredients/:id'
+          element={
+            <CenteringComponent title={'Детали ингредиента'}>
+              <IngredientDetails />
+            </CenteringComponent>
+          }
+        />
+        <Route path='/feed' element={<Feed />} />
+        <Route
+          path='/feed/:number'
+          element={
+            <CenteringComponent title={`#${location.pathname.match(/\d+/)}`}>
+              <OrderInfo />
+            </CenteringComponent>
+          }
+        />
+
         <Route path='/feed' element={<Feed />} />
 
         <Route element={<ProtectedRoute onlyUnAuth />}>
