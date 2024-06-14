@@ -7,9 +7,9 @@ import {
   logoutApi,
   updateUserApi,
   registerUserApi
-} from '@api';
+} from '../../../utils/burger-api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { deleteCookie, setCookie } from '../../utils/cookie';
+import { deleteCookie, setCookie } from '../../../utils/cookie';
 import { TOrder, TUser } from '@utils-types';
 
 type TUserState = {
@@ -24,7 +24,7 @@ type TUserState = {
   userOrders: TOrder[];
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   request: false,
   error: null,
   response: null,
@@ -175,8 +175,8 @@ export const userSlice = createSlice({
         state.error = null;
         state.request = false;
         state.userData = null;
-        localStorage.clear();
-        deleteCookie('accessToken');
+        // localStorage.clear();
+        // deleteCookie('accessToken');
       })
       .addCase(getOrdersAll.pending, (state) => {
         state.error = null;

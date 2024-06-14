@@ -16,9 +16,9 @@ import { AppHeader, IngredientDetails, Modal, OrderInfo } from '@components';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { ProtectedRoute } from '../protected-route/protected-route';
 import { useDispatch } from '@store';
-import { getIngredients } from '@slices/ingredientSlice';
+import { getIngredients } from '@slices/ingredientSlice/ingredientSlice';
 import { useEffect } from 'react';
-import { getUser } from '@slices/userSlice';
+import { getUser } from '@slices/userSlice/userSlice';
 import { CenteringComponent } from '../centering-component';
 
 const App = () => {

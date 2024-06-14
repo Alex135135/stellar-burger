@@ -8,8 +8,8 @@ import {
   orderBurger,
   setRequest,
   resetModal
-} from '@slices/constructorSlice';
-import { getUserState } from '@slices/userSlice';
+} from '@slices/constructorSlice/constructorSlice';
+import { getUserState } from '@slices/userSlice/userSlice';
 
 export const BurgerConstructor: FC = () => {
   const navigate = useNavigate();

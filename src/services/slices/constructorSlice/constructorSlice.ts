@@ -1,4 +1,3 @@
-import { orderBurgerApi } from '@api';
 import {
   PayloadAction,
   createAsyncThunk,
@@ -6,6 +5,7 @@ import {
   nanoid
 } from '@reduxjs/toolkit';
 import { TConstructorIngredient, TIngredient, TOrder } from '@utils-types';
+import { orderBurgerApi } from '../../../utils/burger-api';
 
 export type TConsturctorState = {
   loading: boolean;

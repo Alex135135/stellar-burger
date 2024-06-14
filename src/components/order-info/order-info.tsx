@@ -4,8 +4,8 @@ import { OrderInfoUI } from '@ui';
 import { TIngredient } from '@utils-types';
 import { useSelector, useDispatch } from '@store';
 import { useParams } from 'react-router-dom';
-import { getOrderByNumber, getOrderState } from '@slices/orderSlice';
-import { getIngredientState } from '@slices/ingredientSlice';
+import { getOrderByNumber, getOrderState } from '@slices/orderSlice/orderSlice';
+import { getIngredientState } from '@slices/ingredientSlice/ingredientSlice';
 
 export const OrderInfo: FC = () => {
   const number = Number(useParams().number);
