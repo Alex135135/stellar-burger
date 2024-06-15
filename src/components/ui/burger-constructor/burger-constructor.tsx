@@ -31,6 +31,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       </div>
     ) : (
       <div
+        data-cy='no-bun'
         className={`${styles.noBuns} ${styles.noBunsTop} ml-8 mb-4 mr-5 text text_type_main-default`}
       >
         Выберите булки
@@ -50,6 +51,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         )
       ) : (
         <div
+          data-cy='no-filling'
           className={`${styles.noBuns} ml-8 mb-4 mr-5 text text_type_main-default`}
         >
           Выберите начинку
@@ -84,6 +86,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         size='large'
         children='Оформить заказ'
         onClick={onOrderClick}
+        data-cy='order-button'
       />
     </div>
 

@@ -1,8 +1,8 @@
 import { ProfileOrdersUI } from '@ui-pages';
 import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from '@store';
-import { getOrdersAll, getUserState } from '@slices/userSlice';
-import { getFeeds } from '@slices/feedSlice';
+import { getOrdersAll, getUserState } from '@slices/userSlice/userSlice';
+import { getFeeds } from '@slices/feedSlice/feedSlice';
 
 export const ProfileOrders: FC = () => {
   const userOrders = useSelector(getUserState).userOrders;
