@@ -1,7 +1,7 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useSelector } from '@store';
 import { Preloader } from '@ui';
-import { getUserState } from '@slices/userSlice';
+import { getUserState } from '@slices/userSlice/userSlice';
 
 type ProtectedRouteProps = {
   // children: React.ReactElement;
